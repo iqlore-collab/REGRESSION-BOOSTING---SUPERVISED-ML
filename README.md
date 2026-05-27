@@ -16,15 +16,8 @@ Built with:
 
 🚀 Live Streamlit App:
 
-```text
-PASTE_YOUR_STREAMLIT_LINK_HERE
-```
+https://regression-boosting---supervised-ml-yqcgco8fkul6f9yxefcmfk.streamlit.app/
 
-Example:
-
-```text
-https://housing-price-regression.streamlit.app
-```
 
 ---
 
