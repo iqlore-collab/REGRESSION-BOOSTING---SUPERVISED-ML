@@ -1,85 +1,37 @@
+# Housing Price Prediction App
 
-# 🏠 Housing Price Prediction — Advanced ML Portfolio Project
+This Streamlit app trains an XGBoost regression model directly from the dataset and predicts housing prices.
 
-## 🚀 Project Upgrade
+## Required files
 
-This repository now includes:
+Make sure these files are in the same GitHub repository:
 
-- Advanced regression modeling
-- XGBoost boosting
-- Hyperparameter tuning
-- SHAP explainability
-- Cross-validation
-- Learning curves
-- Error diagnostics
-- Feature engineering
-- Feature selection
-- Streamlit deployment app
-- Saved production-ready model
+```text
+app.py
+requirements.txt
+runtime.txt
+housing_iteration_6_regression.csv
+```
 
----
+The app no longer requires `tuned_xgboost_housing_model.pkl`, which avoids pickle/joblib compatibility issues on Streamlit Cloud.
 
-# 🖥️ Streamlit Application
-
-The project now includes an interactive Streamlit app for predicting house prices.
-
-Run locally:
+## Run locally
 
 ```bash
 pip install -r requirements.txt
 streamlit run app.py
 ```
 
----
+## Deploy on Streamlit Cloud
 
-# 🤖 Machine Learning Stack
-
-- Python
-- Scikit-learn
-- XGBoost
-- SHAP
-- Pandas
-- Seaborn
-- Streamlit
-
----
-
-# 📊 ML Features
-
-- EDA
-- Feature engineering
-- Ensemble learning
-- Boosting algorithms
-- Explainable AI
-- Model persistence
-- Advanced diagnostics
-
----
-
-# 📂 Project Structure
+Main file path:
 
 ```text
-housing-price-regression/
-│
-├── housing_price_regression_advanced_ml_project.ipynb
-├── tuned_xgboost_housing_model.pkl
-├── app.py
-├── requirements.txt
-├── README.md
+app.py
 ```
 
----
+Python version is pinned in:
 
-# 🔥 Why This Project Is Different
-
-This is not only a notebook.
-
-The project demonstrates:
-- ML experimentation
-- tuning workflows
-- explainable AI
-- deployment awareness
-- reusable trained models
-- interactive prediction UI
-
-This makes the project much closer to a real machine learning portfolio application.
+```text
+runtime.txt
+```
