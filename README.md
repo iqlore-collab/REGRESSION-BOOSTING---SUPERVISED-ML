@@ -336,3 +336,343 @@ The real value comes from understanding:
 - how modern machine learning workflows are structured
 
 This notebook evolved into a much more realistic portfolio-level machine learning project rather than a simple regression exercise.
+
+# 🏠 Predykcja Cen Domów — Zaawansowany Projekt Machine Learning (Regresja)
+
+<div align="center">
+
+### Kompleksowy Workflow Machine Learning do Predykcji Cen Nieruchomości
+
+Zbudowany z użyciem:
+
+`Python` • `Scikit-learn` • `XGBoost` • `SHAP` • `Pandas` • `Seaborn`
+
+</div>
+
+---
+
+# 📌 Opis Projektu
+
+Projekt skupia się na przewidywaniu cen nieruchomości przy użyciu zaawansowanych metod supervised machine learning.
+
+To, co zaczęło się jako prosty notebook regresyjny, zostało rozbudowane do pełnego workflow machine learning obejmującego:
+
+- ✅ Exploratory Data Analysis (EDA)
+- ✅ Feature Engineering
+- ✅ Feature Selection
+- ✅ Ensemble Learning
+- ✅ Boosting Algorithms
+- ✅ Hyperparameter Tuning
+- ✅ SHAP Explainability
+- ✅ Learning Curves
+- ✅ Analizę błędów modeli
+- ✅ Pipeline preprocessing
+- ✅ Cross-Validation
+- ✅ Zapisywanie modelu
+
+Finalny notebook łączy rozbudowaną analizę wizualną z nowoczesnymi modelami regresyjnymi opartymi o XGBoost.
+
+---
+
+# 🎯 Główny Cel Projektu
+
+Celem projektu jest przewidywanie:
+
+```python
+SalePrice
+```
+
+na podstawie danych dotyczących nieruchomości, takich jak:
+- powierzchnia domu
+- informacje o garażu
+- jakość wykonania
+- lokalizacja / neighborhood
+- historia remontów
+- piwnice
+- powierzchnia zewnętrzna
+- cechy konstrukcyjne
+
+---
+
+# 📂 Dataset
+
+Dataset używany w Google Colab:
+
+```python
+/content/drive/MyDrive/Colab Notebooks/housing_iteration_6_regression.csv
+```
+
+Dataset zawiera:
+- zmienne numeryczne
+- zmienne kategoryczne
+- brakujące wartości
+- dane rynku nieruchomości
+- strukturalne dane tabularne
+
+---
+
+# 🛠️ Technologie
+
+## 📊 Analiza Danych i Wizualizacja
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+
+## 🤖 Machine Learning
+- Scikit-learn
+- XGBoost
+- SHAP
+
+## ☁️ Środowisko
+- Google Colab
+- Google Drive
+
+## 💾 Zapisywanie Modelu
+- Joblib
+
+---
+
+# 🔎 Exploratory Data Analysis (EDA)
+
+Notebook zawiera rozbudowaną analizę danych:
+
+### ✔ Analiza Missing Values
+- liczba brakujących wartości
+- kolumny z największą ilością braków
+
+### ✔ Analiza Korelacji
+- heatmapy korelacji
+- najsilniejsze zależności z `SalePrice`
+
+### ✔ Wizualizacja Feature'ów
+- scatterploty
+- regression trend lines
+- boxploty
+- analiza neighborhood
+- analiza engineered features
+
+### ✔ Analiza Rozkładów
+- rozkład targetu
+- log-transformacja targetu
+- rozkład residuals
+- rozkład błędów
+
+---
+
+# 🧠 Feature Engineering
+
+Projekt zawiera custom engineered features:
+
+| Engineered Feature | Opis |
+|---|---|
+| `TotalLivingArea` | Powierzchnia mieszkalna + piwnica |
+| `HouseAge` | Wiek nieruchomości |
+| `YearsSinceRemodel` | Lata od remontu |
+| `TotalBathrooms` | Łączna liczba łazienek |
+| `TotalOutdoorArea` | Łączna powierzchnia zewnętrzna |
+| `HasGarage` | Informacja o garażu |
+
+---
+
+# ⚙️ Preprocessing Pipeline
+
+Projekt wykorzystuje pełne pipeline preprocessing:
+
+```python
+Pipeline(...)
+ColumnTransformer(...)
+```
+
+### Numeric Features
+- imputacja medianą
+- scaling
+
+### Categorical Features
+- imputacja najczęstszej wartości
+- one-hot encoding
+
+Dzięki temu workflow jest:
+- czysty
+- powtarzalny
+- production-style
+
+---
+
+# 📈 Modele Regresyjne
+
+Projekt porównuje kilka modeli regresyjnych.
+
+## 1️⃣ Linear Regression
+Bazowy model liniowy.
+
+## 2️⃣ Ridge Regression
+Regresja liniowa z regularyzacją.
+
+## 3️⃣ Random Forest Regressor
+Silny ensemble tree model.
+
+## 4️⃣ XGBoost Regressor
+Najbardziej zaawansowany model w projekcie.
+
+---
+
+# 🚀 Dlaczego XGBoost?
+
+XGBoost wykorzystuje **boosting**, czyli:
+
+1. jeden model wykonuje predykcję
+2. kolejny model uczy się błędów poprzedniego
+3. następny model poprawia wcześniejsze błędy
+4. proces powtarza się iteracyjnie
+
+W przeciwieństwie do Random Forest, XGBoost stale poprawia wcześniejsze predykcje.
+
+To sprawia, że świetnie działa dla:
+- danych tabularnych
+- regresji
+- predykcji cen
+- Kaggle competitions
+- structured machine learning
+
+---
+
+# 🧪 Feature Selection
+
+Notebook zawiera również zaawansowane techniki selekcji cech:
+
+## ✔ Variance Threshold
+Usuwanie cech o bardzo małej wariancji.
+
+## ✔ Correlation Filtering
+Usuwanie mocno skorelowanych zmiennych.
+
+## ✔ SelectKBest
+Wybór najważniejszych statystycznie feature'ów.
+
+## ✔ SelectFromModel
+Wybór feature'ów na podstawie ważności modelu.
+
+## ✔ Recursive Feature Elimination (RFE)
+Iteracyjne usuwanie słabszych feature'ów.
+
+---
+
+# 🔥 Zaawansowane Elementy ML
+
+## ✔ Cross-Validation
+Bardziej wiarygodna ocena modeli.
+
+## ✔ Hyperparameter Tuning
+Optymalizacja parametrów XGBoost przy użyciu RandomizedSearchCV.
+
+## ✔ Learning Curves
+Analiza underfitting / overfitting.
+
+## ✔ SHAP Explainability
+Explainable AI oraz interpretacja wpływu feature'ów.
+
+## ✔ Advanced Error Analysis
+Analiza największych błędów predykcji.
+
+## ✔ Model Persistence
+Zapisywanie i ładowanie modeli `.pkl`.
+
+---
+
+# 📊 Ocena Modeli
+
+Modele oceniane są przy użyciu:
+
+| Metryka | Znaczenie |
+|---|---|
+| MAE | Mean Absolute Error |
+| RMSE | Root Mean Squared Error |
+| R² | Explained Variance |
+
+Dodatkowo notebook zawiera:
+- actual vs predicted plots
+- residual analysis
+- analiza błędów procentowych
+- feature importance
+- SHAP summary plots
+
+---
+
+# 📉 Wizualizacje
+
+Projekt zawiera dużą ilość wizualizacji:
+
+- ✅ Correlation heatmaps
+- ✅ Scatterplots
+- ✅ Regression lines
+- ✅ Boxplots
+- ✅ Missing value charts
+- ✅ Feature importance plots
+- ✅ Residual plots
+- ✅ Error distributions
+- ✅ Learning curves
+- ✅ SHAP plots
+- ✅ Model comparison charts
+
+---
+
+# 🧱 Struktura Projektu
+
+```text
+housing-price-regression/
+│
+├── housing_price_regression_advanced_ml_project.ipynb
+├── housing_iteration_6_regression.csv
+├── tuned_xgboost_housing_model.pkl
+├── README.md
+```
+
+---
+
+# ▶ Uruchomienie Notebooka
+
+## Google Colab Setup
+
+### Mount Google Drive
+
+```python
+from google.colab import drive
+drive.mount('/content/drive')
+```
+
+### Instalacja Bibliotek
+
+```python
+!pip install xgboost shap -q
+```
+
+---
+
+# 💡 Najważniejsze Elementy Projektu
+
+Projekt pokazuje:
+- kompletny workflow ML
+- preprocessing pipelines
+- boosting algorithms
+- explainable AI
+- feature engineering
+- feature selection
+- hyperparameter tuning
+- model diagnostics
+- reproducible machine learning
+
+---
+
+# 🏁 Final Thoughts
+
+Największą wartością projektu nie jest sam wynik modelu.
+
+Najważniejsze jest zrozumienie:
+- które feature'y wpływają na ceny nieruchomości
+- jak boosting poprawia predykcje
+- jak feature selection wpływa na model
+- jak residual analysis pokazuje słabe strony modelu
+- jak działa nowoczesny workflow machine learning
+
+Projekt ewoluował z prostego notebooka regresyjnego do znacznie bardziej realistycznego portfolio machine learning.
